@@ -54,6 +54,8 @@ const MainView: FunctionComponent = () => {
       return;
     }
 
+    numArray.sort((a, b) => {  return a - b;  });
+
     for (let i = 0; i < numArray.length - 1; i++) {
       const maxDiff = Math.abs(numArray[i] - numArray[i + 1]);
       if (maxDiff > ans) ans = maxDiff;
